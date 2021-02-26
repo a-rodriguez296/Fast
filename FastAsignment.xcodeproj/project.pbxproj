@@ -13,6 +13,7 @@
 		5F5ECB5F25E9A79E00E0918D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5ECB5D25E9A79E00E0918D /* Main.storyboard */; };
 		5F5ECB6125E9A79F00E0918D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5ECB6025E9A79F00E0918D /* Assets.xcassets */; };
 		5F5ECB6425E9A79F00E0918D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5ECB6225E9A79F00E0918D /* LaunchScreen.storyboard */; };
+		5F5ECB6D25E9A91B00E0918D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB6C25E9A91B00E0918D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5F5ECB6025E9A79F00E0918D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F5ECB6325E9A79F00E0918D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F5ECB6525E9A79F00E0918D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F5ECB6C25E9A91B00E0918D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,17 @@
 				5F5ECB6025E9A79F00E0918D /* Assets.xcassets */,
 				5F5ECB6225E9A79F00E0918D /* LaunchScreen.storyboard */,
 				5F5ECB6525E9A79F00E0918D /* Info.plist */,
+				5F5ECB6F25E9A93300E0918D /* Other Resources */,
 			);
 			path = FastAsignment;
+			sourceTree = "<group>";
+		};
+		5F5ECB6F25E9A93300E0918D /* Other Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ECB6C25E9A91B00E0918D /* Constants.swift */,
+			);
+			path = "Other Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
 				5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */,
 				5F5ECB5A25E9A79E00E0918D /* SceneDelegate.swift in Sources */,
+				5F5ECB6D25E9A91B00E0918D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
