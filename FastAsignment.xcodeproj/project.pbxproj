@@ -17,6 +17,7 @@
 		5F5ECB7225E9AA1300E0918D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB7125E9AA1300E0918D /* ApiClient.swift */; };
 		5F5ECB7725E9AA6000E0918D /* ApiResponse+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB7625E9AA6000E0918D /* ApiResponse+Movie.swift */; };
 		5F5ECB7A25E9AA9F00E0918D /* Endpoint+GetMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB7925E9AA9F00E0918D /* Endpoint+GetMovies.swift */; };
+		5F5ECB8325E9AEA000E0918D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5F5ECB7125E9AA1300E0918D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5F5ECB7625E9AA6000E0918D /* ApiResponse+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiResponse+Movie.swift"; sourceTree = "<group>"; };
 		5F5ECB7925E9AA9F00E0918D /* Endpoint+GetMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+GetMovies.swift"; sourceTree = "<group>"; };
+		5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,13 @@
 			children = (
 				5F5ECB5725E9A79E00E0918D /* AppDelegate.swift */,
 				5F5ECB5925E9A79E00E0918D /* SceneDelegate.swift */,
-				5F5ECB5B25E9A79E00E0918D /* ViewController.swift */,
-				5F5ECB5D25E9A79E00E0918D /* Main.storyboard */,
+				5F5ECB8025E9AE7800E0918D /* Main VC */,
 				5F5ECB6025E9A79F00E0918D /* Assets.xcassets */,
 				5F5ECB6225E9A79F00E0918D /* LaunchScreen.storyboard */,
 				5F5ECB6525E9A79F00E0918D /* Info.plist */,
 				5F5ECB6F25E9A93300E0918D /* Other Resources */,
 				5F5ECB7425E9AA3800E0918D /* Network */,
+				5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */,
 			);
 			path = FastAsignment;
 			sourceTree = "<group>";
@@ -109,6 +111,15 @@
 				5F5ECB7925E9AA9F00E0918D /* Endpoint+GetMovies.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		5F5ECB8025E9AE7800E0918D /* Main VC */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ECB5B25E9A79E00E0918D /* ViewController.swift */,
+				5F5ECB5D25E9A79E00E0918D /* Main.storyboard */,
+			);
+			path = "Main VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				5F5ECB5A25E9A79E00E0918D /* SceneDelegate.swift in Sources */,
 				5F5ECB6D25E9A91B00E0918D /* Constants.swift in Sources */,
 				5F5ECB7225E9AA1300E0918D /* ApiClient.swift in Sources */,
+				5F5ECB8325E9AEA000E0918D /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
