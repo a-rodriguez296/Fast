@@ -12,6 +12,7 @@ protocol ResultsBusinessLogic: class {
 }
 
 protocol ResultsPresentationLogic: class {
+    func present(_ movie: Movie)
 
 }
 

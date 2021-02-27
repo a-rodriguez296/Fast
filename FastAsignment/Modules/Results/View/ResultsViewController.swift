@@ -48,6 +48,7 @@ class ResultsViewController: UIViewController {
 
 extension ResultsViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
+        guard let text = searchBar.text else { return }
+        interactor?.fetchMovie(with: text)
     }
 }

@@ -11,4 +11,7 @@ class ResultsPresenter: ResultsPresentationLogic {
 
     weak var viewController: ResultsDisplayLogic?
 
+    func present(_ movie: Movie) {
+        print(movie)
+    }
 }
