@@ -14,10 +14,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didPressContinue(_ sender: Any) {
-        let resultsVC = ResultsViewController()
+        let resultsVC = ResultsRouter.assembleModule()
         resultsVC.modalPresentationStyle = .overFullScreen
         present(resultsVC, animated: true, completion: nil)
     }
-
 }
 

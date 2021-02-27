@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F3BEE5225EAB624001385E3 /* ResultsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BEE5125EAB624001385E3 /* ResultsContract.swift */; };
+		5F3BEE5525EAB734001385E3 /* ResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BEE5425EAB734001385E3 /* ResultsRouter.swift */; };
+		5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BEE5B25EAB7CE001385E3 /* ResultsInteractor.swift */; };
+		5F3BEE6125EAB81F001385E3 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3BEE6025EAB81F001385E3 /* ResultsPresenter.swift */; };
 		5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB5725E9A79E00E0918D /* AppDelegate.swift */; };
 		5F5ECB5A25E9A79E00E0918D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB5925E9A79E00E0918D /* SceneDelegate.swift */; };
 		5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB5B25E9A79E00E0918D /* ViewController.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F3BEE5125EAB624001385E3 /* ResultsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsContract.swift; sourceTree = "<group>"; };
+		5F3BEE5425EAB734001385E3 /* ResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRouter.swift; sourceTree = "<group>"; };
+		5F3BEE5B25EAB7CE001385E3 /* ResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInteractor.swift; sourceTree = "<group>"; };
+		5F3BEE6025EAB81F001385E3 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		5F5ECB5425E9A79E00E0918D /* FastAsignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastAsignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5ECB5725E9A79E00E0918D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5ECB5925E9A79E00E0918D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F3BEE4F25EAB5EA001385E3 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BEE5925EAB75F001385E3 /* Contract */,
+				5F3BEE5E25EAB80A001385E3 /* Interactor */,
+				5F3BEE6325EAB859001385E3 /* Presenter */,
+				5F3BEE6525EAB867001385E3 /* View */,
+				5F3BEE5725EAB73B001385E3 /* Router */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		5F3BEE5725EAB73B001385E3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BEE5425EAB734001385E3 /* ResultsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5F3BEE5925EAB75F001385E3 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BEE5125EAB624001385E3 /* ResultsContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		5F3BEE5E25EAB80A001385E3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BEE5B25EAB7CE001385E3 /* ResultsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5F3BEE6325EAB859001385E3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5F3BEE6025EAB81F001385E3 /* ResultsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5F3BEE6525EAB867001385E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F3BEE6825EABA86001385E3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ECB8025E9AE7800E0918D /* Main VC */,
+				5F3BEE4F25EAB5EA001385E3 /* Results */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		5F5ECB4B25E9A79E00E0918D = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +137,12 @@
 			children = (
 				5F5ECB5725E9A79E00E0918D /* AppDelegate.swift */,
 				5F5ECB5925E9A79E00E0918D /* SceneDelegate.swift */,
-				5F5ECB8025E9AE7800E0918D /* Main VC */,
+				5F3BEE6825EABA86001385E3 /* Modules */,
 				5F5ECB6025E9A79F00E0918D /* Assets.xcassets */,
 				5F5ECB6225E9A79F00E0918D /* LaunchScreen.storyboard */,
 				5F5ECB6525E9A79F00E0918D /* Info.plist */,
 				5F5ECB6F25E9A93300E0918D /* Other Resources */,
 				5F5ECB7425E9AA3800E0918D /* Network */,
-				5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */,
 			);
 			path = FastAsignment;
 			sourceTree = "<group>";
@@ -193,11 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
+				5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */,
 				5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */,
+				5F3BEE6125EAB81F001385E3 /* ResultsPresenter.swift in Sources */,
 				5F5ECB7725E9AA6000E0918D /* ApiResponse+Movie.swift in Sources */,
+				5F3BEE5225EAB624001385E3 /* ResultsContract.swift in Sources */,
 				5F5ECB7A25E9AA9F00E0918D /* Endpoint+GetMovies.swift in Sources */,
 				5F5ECB5A25E9A79E00E0918D /* SceneDelegate.swift in Sources */,
 				5F5ECB6D25E9A91B00E0918D /* Constants.swift in Sources */,
+				5F3BEE5525EAB734001385E3 /* ResultsRouter.swift in Sources */,
 				5F5ECB7225E9AA1300E0918D /* ApiClient.swift in Sources */,
 				5F5ECB8325E9AEA000E0918D /* ResultsViewController.swift in Sources */,
 			);

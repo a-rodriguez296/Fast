@@ -9,6 +9,9 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    var interactor: ResultsBusinessLogic?
+    var router: ResultsWireframeLogic?
+
     let searchBar = UISearchBar()
     let tableView = UITableView()
 
