@@ -27,7 +27,19 @@ class MovieViewCell: UITableViewCell {
     func configureCell (with viewModel: ResultsViewModels.MovieViewModel) {
         titleLabel.text = viewModel.title
         subTitleLabel.text = viewModel.actors
-        //posterImageView.image = 
+        donwloadPoster(with: viewModel.poster)
     }
-    
+
+    func donwloadPoster(with stURL: String) {
+        guard let url = URL(string: stURL) else { return }
+        ApiClient.shared.donwloadAsset(with: url) {[weak self] data in
+            let image = UIImage(data: data)
+            self?.posterImageView.image = image
+        }
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        ApiClient.shared.cancelCurrentTask()
+    }
 }

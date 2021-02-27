@@ -29,7 +29,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laP-oL-aHJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laP-oL-aHJ">
                         <rect key="frame" x="76" y="40" width="228" height="18"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <nil key="textColor"/>
@@ -44,6 +44,8 @@
                     <constraint firstItem="ssx-HJ-9uD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WAN-3k-Jed"/>
                     <constraint firstItem="x0M-mF-iG3" firstAttribute="leading" secondItem="ssx-HJ-9uD" secondAttribute="trailing" constant="8" symbolic="YES" id="ZaU-ft-Wp6"/>
                     <constraint firstItem="ssx-HJ-9uD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r1P-Jx-uVf"/>
+                    <constraint firstAttribute="bottom" secondItem="laP-oL-aHJ" secondAttribute="bottom" constant="13" id="suc-LK-mRL"/>
+                    <constraint firstItem="x0M-mF-iG3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="wAp-Jq-ySa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

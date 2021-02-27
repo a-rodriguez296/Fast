@@ -29,6 +29,8 @@ class ResultsViewController: UIViewController {
         tableView.register(MovieViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 71.0
     }
 
     func configureViews() {

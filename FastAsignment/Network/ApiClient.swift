@@ -18,31 +18,45 @@ class ApiClient {
 
         let urlComponents = request.getURLComponents()
 
-            guard let url = urlComponents.url else {
-                return
+        guard let url = urlComponents.url else {
+            return
+        }
+        dataTask = defaultSession.dataTask(with: url) { [weak self] data, response, error in
+            defer {
+                self?.dataTask = nil
             }
-            dataTask = defaultSession.dataTask(with: url) { [weak self] data, response, error in
-                defer {
-                    self?.dataTask = nil
-                }
-                if let error = error {
-                    completionHandler(APIResult.failure(error))
-                }
-                else {
-                    DispatchQueue.main.async {
-                        if let data = data,
-                           let response = response as? HTTPURLResponse {
-                            do {
-                                let decodedResponse = try JSONDecoder().decode(U.self, from: data)
-                                completionHandler(APIResult.success(response.statusCode, decodedResponse))
-                            } catch {
-                                completionHandler(APIResult.empty)
-                            }
+            if let error = error {
+                completionHandler(APIResult.failure(error))
+            }
+            else {
+                DispatchQueue.main.async {
+                    if let data = data,
+                       let response = response as? HTTPURLResponse {
+                        do {
+                            let decodedResponse = try JSONDecoder().decode(U.self, from: data)
+                            completionHandler(APIResult.success(response.statusCode, decodedResponse))
+                        } catch {
+                            completionHandler(APIResult.empty)
                         }
                     }
                 }
             }
-            dataTask?.resume()
+        }
+        dataTask?.resume()
+    }
+
+    func donwloadAsset(with url: URL, completionHandler: @escaping (Data) -> Void) {
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+                completionHandler(data)
+            }
+        }
+        dataTask?.resume()
+    }
+
+    func cancelCurrentTask() {
+        dataTask?.cancel()
     }
 }
 
