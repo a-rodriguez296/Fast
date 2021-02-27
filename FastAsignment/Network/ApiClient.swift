@@ -29,13 +29,15 @@ class ApiClient {
                     completionHandler(APIResult.failure(error))
                 }
                 else {
-                    if let data = data,
-                       let response = response as? HTTPURLResponse {
-                        do {
-                            let decodedResponse = try JSONDecoder().decode(U.self, from: data)
-                            completionHandler(APIResult.success(response.statusCode, decodedResponse))
-                        } catch {
-                            completionHandler(APIResult.empty)
+                    DispatchQueue.main.async {
+                        if let data = data,
+                           let response = response as? HTTPURLResponse {
+                            do {
+                                let decodedResponse = try JSONDecoder().decode(U.self, from: data)
+                                completionHandler(APIResult.success(response.statusCode, decodedResponse))
+                            } catch {
+                                completionHandler(APIResult.empty)
+                            }
                         }
                     }
                 }

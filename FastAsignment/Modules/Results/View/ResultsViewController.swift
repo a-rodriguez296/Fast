@@ -14,13 +14,21 @@ class ResultsViewController: UIViewController {
 
     let searchBar = UISearchBar()
     let tableView = UITableView()
+    var movies = [ResultsViewModels.MovieViewModel]()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
+        configureTable()
 
         // Do any additional setup after loading the view.
+    }
+
+    func configureTable() {
+        tableView.register(MovieViewCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     func configureViews() {
@@ -53,8 +61,21 @@ extension ResultsViewController: UISearchBarDelegate {
     }
 }
 
+extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: MovieViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.configureCell(with: movies[indexPath.row])
+        return cell
+    }
+}
+
 extension ResultsViewController: ResultsDisplayLogic {
     func display(_ movies: [ResultsViewModels.MovieViewModel]) {
-        print(movies)
+        self.movies = movies
+        tableView.reloadData()
     }
 }

@@ -25,6 +25,8 @@
 		5F5ECB8325E9AEA000E0918D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */; };
 		5F685C5E25EAC94C005BF21B /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C5C25EAC94C005BF21B /* MovieViewCell.swift */; };
 		5F685C5F25EAC94C005BF21B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */; };
+		5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */; };
+		5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6425EACD13005BF21B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5F5ECB8225E9AEA000E0918D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		5F685C5C25EAC94C005BF21B /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
+		5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		5F685C6425EACD13005BF21B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				5F5ECB6C25E9A91B00E0918D /* Constants.swift */,
+				5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */,
+				5F685C6425EACD13005BF21B /* UIView+Extension.swift */,
 			);
 			path = "Other Resources";
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 			files = (
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
 				5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */,
+				5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */,
+				5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */,
 				5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */,
 				5F3BEE6125EAB81F001385E3 /* ResultsPresenter.swift in Sources */,
 				5F3BEE6B25EABE3F001385E3 /* ResultsViewModels.swift in Sources */,
