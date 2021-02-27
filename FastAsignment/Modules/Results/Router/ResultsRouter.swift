@@ -17,6 +17,7 @@ class ResultsRouter: ResultsWireframeLogic {
         let interactor = ResultsInteractor()
 
         let presenter = ResultsPresenter()
+        presenter.viewController = viewController
         interactor.presenter = presenter
 
         let router = ResultsRouter()

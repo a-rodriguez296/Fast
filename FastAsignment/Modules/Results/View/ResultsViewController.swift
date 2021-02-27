@@ -52,3 +52,9 @@ extension ResultsViewController: UISearchBarDelegate {
         interactor?.fetchMovie(with: text)
     }
 }
+
+extension ResultsViewController: ResultsDisplayLogic {
+    func display(_ movies: [ResultsViewModels.MovieViewModel]) {
+        print(movies)
+    }
+}

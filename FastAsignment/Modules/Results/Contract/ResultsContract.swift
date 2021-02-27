@@ -17,7 +17,7 @@ protocol ResultsPresentationLogic: class {
 }
 
 protocol ResultsDisplayLogic: class {
-
+    func display(_ movies: [ResultsViewModels.MovieViewModel])
 }
 
 protocol ResultsWireframeLogic: class {
