@@ -11,8 +11,10 @@ class MovieViewCell: UITableViewCell {
 
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
-
+    @IBOutlet weak var genresLabel: UILabel!
+    @IBOutlet weak var actorsLabel: UILabel!
+    @IBOutlet weak var plotLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,7 +28,9 @@ class MovieViewCell: UITableViewCell {
 
     func configureCell (with viewModel: ResultsViewModels.MovieViewModel) {
         titleLabel.text = viewModel.title
-        subTitleLabel.text = viewModel.actors
+        genresLabel.text = viewModel.genre
+        actorsLabel.text = viewModel.actors
+        plotLabel.text = viewModel.plot
         donwloadPoster(with: viewModel.poster)
     }
 

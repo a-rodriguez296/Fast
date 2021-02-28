@@ -30,7 +30,7 @@ class ResultsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 71.0
+        tableView.estimatedRowHeight = 139.0
     }
 
     func configureViews() {
