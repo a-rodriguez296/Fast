@@ -70,7 +70,10 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.configureCell(with: movies[indexPath.row])
+        let movie = movies[indexPath.row]
+        cell.configureCell(with: movie) { flag in
+            print(flag)
+        }
         return cell
     }
 }

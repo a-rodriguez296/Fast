@@ -17,6 +17,7 @@ class MovieViewCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
 
     var viewModel: ResultsViewModels.MovieViewModel?
+    var actionHandler: ((Bool) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,8 +30,9 @@ class MovieViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configureCell (with viewModel: ResultsViewModels.MovieViewModel) {
+    func configureCell (with viewModel: ResultsViewModels.MovieViewModel, handler: @escaping (Bool) -> Void) {
         self.viewModel = viewModel
+        actionHandler = handler
         titleLabel.text = viewModel.title
         genresLabel.text = viewModel.genre
         actorsLabel.text = viewModel.actors
@@ -62,6 +64,8 @@ class MovieViewCell: UITableViewCell {
 
     @IBAction func didPressFavoriteButton(_ sender: Any) {
         viewModel?.isFavorite.toggle()
-        configureFavoriteButton(with: viewModel?.isFavorite ?? false)
+        guard let favoriteFlag = viewModel?.isFavorite else { return }
+        configureFavoriteButton(with: favoriteFlag)
+        actionHandler?(favoriteFlag)
     }
 }
