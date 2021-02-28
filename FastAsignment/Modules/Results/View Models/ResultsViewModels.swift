@@ -16,6 +16,7 @@ enum ResultsViewModels {
         var actors: String
         var plot: String
         var poster: String
+        var imdbID: String
         var isFavorite = false
 
         init(with movie: Movie) {
@@ -25,6 +26,7 @@ enum ResultsViewModels {
             actors = movie.actors
             plot = movie.plot
             poster = movie.poster
+            imdbID = movie.imdbID
         }
     }
 }

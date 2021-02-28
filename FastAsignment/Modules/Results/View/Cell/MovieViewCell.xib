@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0M-mF-iG3">
-                        <rect key="frame" x="76" y="16" width="44" height="21"/>
+                        <rect key="frame" x="76" y="16" width="198" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,14 +47,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hH-zQ-Vhn">
+                        <rect key="frame" x="282" y="15.5" width="22" height="22"/>
+                        <state key="normal" image="star" catalog="system"/>
+                        <connections>
+                            <action selector="didPressFavoriteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fAV-CF-oTR"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="laP-oL-aHJ" secondAttribute="trailing" constant="16" id="155-cB-AFo"/>
+                    <constraint firstAttribute="trailing" secondItem="9hH-zQ-Vhn" secondAttribute="trailing" constant="16" id="7Mk-nG-zQD"/>
                     <constraint firstItem="M5M-bJ-FWo" firstAttribute="top" secondItem="laP-oL-aHJ" secondAttribute="bottom" constant="5" id="98Z-rk-tMO"/>
                     <constraint firstItem="laP-oL-aHJ" firstAttribute="top" secondItem="x0M-mF-iG3" secondAttribute="bottom" constant="5" id="DtV-qy-8cF"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LWR-c6-sKn" secondAttribute="bottom" constant="14" id="Fzy-wi-aHJ"/>
+                    <constraint firstItem="9hH-zQ-Vhn" firstAttribute="centerY" secondItem="x0M-mF-iG3" secondAttribute="centerY" id="Iub-Dt-b98"/>
                     <constraint firstItem="laP-oL-aHJ" firstAttribute="leading" secondItem="x0M-mF-iG3" secondAttribute="leading" id="OJ6-Os-WyJ"/>
                     <constraint firstItem="ssx-HJ-9uD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WAN-3k-Jed"/>
+                    <constraint firstItem="9hH-zQ-Vhn" firstAttribute="leading" secondItem="x0M-mF-iG3" secondAttribute="trailing" constant="8" id="X8w-4B-zL5"/>
                     <constraint firstItem="x0M-mF-iG3" firstAttribute="leading" secondItem="ssx-HJ-9uD" secondAttribute="trailing" constant="8" id="ZaU-ft-Wp6"/>
                     <constraint firstItem="M5M-bJ-FWo" firstAttribute="leading" secondItem="laP-oL-aHJ" secondAttribute="leading" id="Zsk-I8-ZNB"/>
                     <constraint firstItem="LWR-c6-sKn" firstAttribute="leading" secondItem="M5M-bJ-FWo" secondAttribute="leading" id="gDK-Ti-K7w"/>
@@ -68,6 +78,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="actorsLabel" destination="laP-oL-aHJ" id="qmg-vj-DfL"/>
+                <outlet property="favoriteButton" destination="9hH-zQ-Vhn" id="ck0-Vx-xws"/>
                 <outlet property="genresLabel" destination="M5M-bJ-FWo" id="hIn-uO-WN0"/>
                 <outlet property="plotLabel" destination="LWR-c6-sKn" id="ClP-Pr-jUg"/>
                 <outlet property="posterImageView" destination="ssx-HJ-9uD" id="qJG-w9-HZl"/>
@@ -76,4 +87,7 @@
             <point key="canvasLocation" x="-128.98550724637681" y="-21.428571428571427"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
 </document>

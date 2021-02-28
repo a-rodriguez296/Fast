@@ -14,7 +14,10 @@ class MovieViewCell: UITableViewCell {
     @IBOutlet weak var genresLabel: UILabel!
     @IBOutlet weak var actorsLabel: UILabel!
     @IBOutlet weak var plotLabel: UILabel!
-    
+    @IBOutlet weak var favoriteButton: UIButton!
+
+    var viewModel: ResultsViewModels.MovieViewModel?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,10 +30,12 @@ class MovieViewCell: UITableViewCell {
     }
 
     func configureCell (with viewModel: ResultsViewModels.MovieViewModel) {
+        self.viewModel = viewModel
         titleLabel.text = viewModel.title
         genresLabel.text = viewModel.genre
         actorsLabel.text = viewModel.actors
         plotLabel.text = viewModel.plot
+        configureFavoriteButton(with: viewModel.isFavorite)
         donwloadPoster(with: viewModel.poster)
     }
 
@@ -42,8 +47,21 @@ class MovieViewCell: UITableViewCell {
         }
     }
 
+    func configureFavoriteButton(with flag: Bool) {
+        if flag {
+            favoriteButton.setImage(UIImage(systemName: "star.fill")!, for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(systemName: "star")!, for: .normal)
+        }
+    }
+
     override func prepareForReuse() {
         super.prepareForReuse()
         ApiClient.shared.cancelCurrentTask()
+    }
+
+    @IBAction func didPressFavoriteButton(_ sender: Any) {
+        viewModel?.isFavorite.toggle()
+        configureFavoriteButton(with: viewModel?.isFavorite ?? false)
     }
 }

@@ -14,6 +14,7 @@ struct Movie: Decodable {
     var actors: String
     var plot: String
     var poster: String
+    var imdbID: String
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -22,5 +23,6 @@ struct Movie: Decodable {
         case actors = "Actors"
         case plot = "Plot"
         case poster = "Poster"
+        case imdbID
     }
 }
