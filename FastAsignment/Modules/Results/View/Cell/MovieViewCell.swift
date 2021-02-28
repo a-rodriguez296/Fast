@@ -16,7 +16,7 @@ class MovieViewCell: UITableViewCell {
     @IBOutlet weak var plotLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
 
-    var viewModel: ResultsViewModels.MovieViewModel?
+    var viewModel: MovieViewModel?
     var actionHandler: ((Bool) -> Void)?
 
     override func awakeFromNib() {
@@ -30,7 +30,7 @@ class MovieViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configureCell (with viewModel: ResultsViewModels.MovieViewModel, handler: @escaping (Bool) -> Void) {
+    func configureCell (with viewModel: MovieViewModel, handler: @escaping (Bool) -> Void) {
         self.viewModel = viewModel
         actionHandler = handler
         titleLabel.text = viewModel.title

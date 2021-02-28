@@ -7,26 +7,24 @@
 
 import Foundation
 
-enum ResultsViewModels {
+struct MovieViewModel {
+    var title: String
+    var year: String
+    var genre: String
+    var actors: String
+    var plot: String
+    var poster: String
+    var imdbID: String
+    var isFavorite: Bool
 
-    struct MovieViewModel {
-        var title: String
-        var year: String
-        var genre: String
-        var actors: String
-        var plot: String
-        var poster: String
-        var imdbID: String
-        var isFavorite = false
-
-        init(with movie: Movie) {
-            title = movie.title
-            year = movie.year
-            genre = movie.genre
-            actors = movie.actors
-            plot = movie.plot
-            poster = movie.poster
-            imdbID = movie.imdbID
-        }
+    init(with movie: Movie) {
+        title = movie.title
+        year = movie.year
+        genre = movie.genre
+        actors = movie.actors
+        plot = movie.plot
+        poster = movie.poster
+        imdbID = movie.imdbID
+        isFavorite = movie.isFavorite
     }
 }

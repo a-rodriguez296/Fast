@@ -9,6 +9,7 @@ import Foundation
 
 protocol ResultsBusinessLogic: class {
     func fetchMovie(with title: String)
+    func toggleMovieFavoriteStatus(with movieId: String, flag: Bool)
 }
 
 protocol ResultsPresentationLogic: class {
@@ -17,7 +18,7 @@ protocol ResultsPresentationLogic: class {
 }
 
 protocol ResultsDisplayLogic: class {
-    func display(_ movies: [ResultsViewModels.MovieViewModel])
+    func display(_ movies: [MovieViewModel])
 }
 
 protocol ResultsWireframeLogic: class {

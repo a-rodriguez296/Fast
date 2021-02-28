@@ -14,7 +14,7 @@ class ResultsViewController: UIViewController {
 
     let searchBar = UISearchBar()
     let tableView = UITableView()
-    var movies = [ResultsViewModels.MovieViewModel]()
+    var movies = [MovieViewModel]()
 
 
     override func viewDidLoad() {
@@ -71,15 +71,15 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         let movie = movies[indexPath.row]
-        cell.configureCell(with: movie) { flag in
-            print(flag)
+        cell.configureCell(with: movie) {[weak self] flag in
+            self?.interactor?.toggleMovieFavoriteStatus(with: movie.imdbID, flag: flag)
         }
         return cell
     }
 }
 
 extension ResultsViewController: ResultsDisplayLogic {
-    func display(_ movies: [ResultsViewModels.MovieViewModel]) {
+    func display(_ movies: [MovieViewModel]) {
         self.movies = movies
         tableView.reloadData()
     }

@@ -27,6 +27,7 @@
 		5F685C5F25EAC94C005BF21B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */; };
 		5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */; };
 		5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6425EACD13005BF21B /* UIView+Extension.swift */; };
+		5F9C3EFD25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		5F685C6425EACD13005BF21B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesPlaylistInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				5F5ECB6525E9A79F00E0918D /* Info.plist */,
 				5F5ECB6F25E9A93300E0918D /* Other Resources */,
 				5F5ECB7425E9AA3800E0918D /* Network */,
+				5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */,
 			);
 			path = FastAsignment;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
 				5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */,
 				5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */,
+				5F9C3EFD25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift in Sources */,
 				5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */,
 				5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */,
 				5F3BEE6125EAB81F001385E3 /* ResultsPresenter.swift in Sources */,
