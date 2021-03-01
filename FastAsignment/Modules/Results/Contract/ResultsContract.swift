@@ -21,10 +21,6 @@ protocol ResultsDisplayLogic: class {
     func display(_ movies: [MovieViewModel])
 }
 
-protocol ResultsWireframeLogic: class {
+protocol ResultsWireframeLogic: class {}
 
-}
-
-protocol ResultsDataStore {
-    
-}
+protocol ResultsDataStore {}

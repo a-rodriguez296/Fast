@@ -27,6 +27,11 @@
 		5F685C5F25EAC94C005BF21B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */; };
 		5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */; };
 		5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F685C6425EACD13005BF21B /* UIView+Extension.swift */; };
+		5F9277CF25EC790E00CE1F02 /* FavoritesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277CE25EC790E00CE1F02 /* FavoritesContract.swift */; };
+		5F9277D625EC7A0B00CE1F02 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277D525EC7A0B00CE1F02 /* FavoritesInteractor.swift */; };
+		5F9277DB25EC7A3A00CE1F02 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277DA25EC7A3A00CE1F02 /* FavoritesPresenter.swift */; };
+		5F9277E025EC7A6200CE1F02 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */; };
+		5F9277E525EC7B6B00CE1F02 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */; };
 		5F9C3EFD25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */; };
 		5F9C3F0025EB469700E2063F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C3EFF25EB469700E2063F /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,11 @@
 		5F685C5D25EAC94C005BF21B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		5F685C6125EACC9B005BF21B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		5F685C6425EACD13005BF21B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5F9277CE25EC790E00CE1F02 /* FavoritesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContract.swift; sourceTree = "<group>"; };
+		5F9277D525EC7A0B00CE1F02 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		5F9277DA25EC7A3A00CE1F02 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesPlaylistInfo.swift; sourceTree = "<group>"; };
 		5F9C3EFF25EB469700E2063F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,8 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				5F5ECB8025E9AE7800E0918D /* Main VC */,
+				5F9277CC25EC789100CE1F02 /* TabBar */,
 				5F3BEE4F25EAB5EA001385E3 /* Results */,
-				5F9C3EFF25EB469700E2063F /* TabBarController.swift */,
+				5F9277D125EC791A00CE1F02 /* Favorites */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -227,6 +238,66 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5F9277CC25EC789100CE1F02 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5F9C3EFF25EB469700E2063F /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5F9277D125EC791A00CE1F02 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277D325EC79FB00CE1F02 /* Contract */,
+				5F9277D825EC7A2800CE1F02 /* Interactor */,
+				5F9277DD25EC7A5000CE1F02 /* Presenter */,
+				5F9277E225EC7AA900CE1F02 /* View */,
+				5F9277E725EC7B6F00CE1F02 /* Router */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		5F9277D325EC79FB00CE1F02 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277CE25EC790E00CE1F02 /* FavoritesContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		5F9277D825EC7A2800CE1F02 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277D525EC7A0B00CE1F02 /* FavoritesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5F9277DD25EC7A5000CE1F02 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277DA25EC7A3A00CE1F02 /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5F9277E225EC7AA900CE1F02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F9277E725EC7B6F00CE1F02 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,23 +370,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
+				5F9277CF25EC790E00CE1F02 /* FavoritesContract.swift in Sources */,
 				5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */,
 				5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */,
 				5F9C3F0025EB469700E2063F /* TabBarController.swift in Sources */,
 				5F9C3EFD25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift in Sources */,
+				5F9277E025EC7A6200CE1F02 /* FavoritesViewController.swift in Sources */,
 				5F685C6225EACC9B005BF21B /* UITableView+Extension.swift in Sources */,
 				5F5ECB5825E9A79E00E0918D /* AppDelegate.swift in Sources */,
 				5F3BEE6125EAB81F001385E3 /* ResultsPresenter.swift in Sources */,
 				5F3BEE6B25EABE3F001385E3 /* ResultsViewModels.swift in Sources */,
+				5F9277D625EC7A0B00CE1F02 /* FavoritesInteractor.swift in Sources */,
 				5F5ECB7725E9AA6000E0918D /* ApiResponse+Movie.swift in Sources */,
 				5F3BEE5225EAB624001385E3 /* ResultsContract.swift in Sources */,
 				5F5ECB7A25E9AA9F00E0918D /* Endpoint+GetMovies.swift in Sources */,
 				5F5ECB5A25E9A79E00E0918D /* SceneDelegate.swift in Sources */,
 				5F5ECB6D25E9A91B00E0918D /* Constants.swift in Sources */,
+				5F9277E525EC7B6B00CE1F02 /* FavoritesRouter.swift in Sources */,
 				5F3BEE5525EAB734001385E3 /* ResultsRouter.swift in Sources */,
 				5F5ECB7225E9AA1300E0918D /* ApiClient.swift in Sources */,
 				5F5ECB8325E9AEA000E0918D /* ResultsViewController.swift in Sources */,
 				5F685C5E25EAC94C005BF21B /* MovieViewCell.swift in Sources */,
+				5F9277DB25EC7A3A00CE1F02 /* FavoritesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
