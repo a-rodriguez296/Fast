@@ -13,6 +13,7 @@ protocol MoviesRepositoryProtocol {
     func addFavorite(_ movie: Movie)
     func removeFavorite(_ movie: Movie)
     func contains(_ movie: Movie) -> Bool
+    func getFavoriteMovies() -> [Movie]
 }
 
 extension MoviesRepositoryProtocol {
@@ -38,5 +39,9 @@ extension MoviesRepositoryProtocol {
         return favoriteMovies.contains {
             return $0.imdbID == movie.imdbID
         }
+    }
+
+    func getFavoriteMovies() -> [Movie] {
+        return favoriteMovies
     }
 }

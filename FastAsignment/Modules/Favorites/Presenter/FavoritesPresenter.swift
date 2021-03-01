@@ -12,6 +12,9 @@ class FavoritesPresenter: FavoritesPresentationLogic {
     weak var viewController: FavoritesDisplayLogic?
 
     func present(_ movies: [Movie]) {
-
+        let movies: [MovieViewModel] = movies.map {
+            return MovieViewModel(with: $0)
+        }
+        viewController?.display(movies)
     }
 }

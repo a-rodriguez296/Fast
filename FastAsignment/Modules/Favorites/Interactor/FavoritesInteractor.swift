@@ -7,11 +7,11 @@
 
 import Foundation
 
-class FavoritesInteractor: FavoritesBusinessLogic {
+class FavoritesInteractor: FavoritesBusinessLogic, MoviesRepositoryProtocol {
 
     var presenter: FavoritesPresentationLogic?
 
     func fetchFavoriteMovies() {
-
+        presenter?.present(getFavoriteMovies())
     }
 }
