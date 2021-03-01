@@ -2,42 +2,35 @@
 //  UIView+Extension.swift
 //  FastAsignment
 //
-//  Created by Alejandro Rodríguez on 27/02/21.
+//  Created by Alejandro Rodríguez on 1/03/21.
 //
-
-import Foundation
 
 import UIKit
 
-extension UIViewController {
+extension UIView {
+    func loadNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        guard let nibLoaded = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
+            fatalError("Could not load nib with name: \(nibName)")
+        }
+        return nibLoaded
+    }
 
-func showToast(message : String) {
-
-    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-150, width: 150, height: 35))
-    toastLabel.backgroundColor = UIColor.blue.withAlphaComponent(0.75)
-    toastLabel.textColor = UIColor.white
-    toastLabel.textAlignment = .center;
-    toastLabel.text = message
-    toastLabel.alpha = 1.0
-    toastLabel.layer.cornerRadius = 10;
-    toastLabel.clipsToBounds  =  true
-    self.view.addSubview(toastLabel)
-    UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
-         toastLabel.alpha = 0.0
-    }, completion: {(isCompleted) in
-        toastLabel.removeFromSuperview()
-    })
-} }
-
-protocol ReusableView: class {
-    static var defaultReuseIdentifier: String { get }
-}
-
-extension ReusableView where Self: UIView {
-
-    static var defaultReuseIdentifier: String {
-        return String(describing: self)
+    func xibSetup() {
+        let subview = loadNib()
+        subview.frame = bounds
+        autoresizingMask = .flexibleHeight
+        self.addSubview(subview)
+        subview.translatesAutoresizingMaskIntoConstraints = true
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": subview]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": subview]))
     }
 }
-
-extension UITableViewCell: ReusableView {}

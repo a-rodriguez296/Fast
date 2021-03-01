@@ -31,6 +31,7 @@ class ResultsViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 139.0
+        tableView.tableFooterView = UIView(frame: .zero)
     }
 
     func configureViews() {
@@ -84,6 +85,18 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
 extension ResultsViewController: ResultsDisplayLogic {
     func display(_ movies: [MovieViewModel]) {
         self.movies = movies
+        tableView.backgroundView = nil
         tableView.reloadData()
+    }
+
+    func displayError(with viewModel: MovieSearchErrorViewModel) {
+        movies.removeAll()
+        let backgroundView = TableBackgroundView(frame: CGRect(origin: CGPoint.zero, size: tableView.frame.size))
+        backgroundView.configureView(with: viewModel)
+        tableView.backgroundView = backgroundView
+        movies.removeAll()
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.reloadData()
+        tableView.isScrollEnabled = false
     }
 }

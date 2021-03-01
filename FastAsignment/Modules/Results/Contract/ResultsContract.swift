@@ -13,12 +13,13 @@ protocol ResultsBusinessLogic: class {
 }
 
 protocol ResultsPresentationLogic: class {
-    func present(_ movie: Movie)
-
+    func present(_ result: Movie)
+    func present(_ error: Error?)
 }
 
 protocol ResultsDisplayLogic: class {
     func display(_ movies: [MovieViewModel])
+    func displayError(with viewModel: MovieSearchErrorViewModel)
 }
 
 protocol ResultsWireframeLogic: class {}

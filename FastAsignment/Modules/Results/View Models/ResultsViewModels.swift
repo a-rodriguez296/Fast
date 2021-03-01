@@ -28,3 +28,8 @@ struct MovieViewModel {
         isFavorite = movie.isFavorite
     }
 }
+
+struct MovieSearchErrorViewModel {
+    var title: String
+    var imageName: String
+}

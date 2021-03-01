@@ -25,9 +25,9 @@ class ResultsInteractor: ResultsBusinessLogic, MoviesRepositoryProtocol {
                 }
                 self?.presenter?.present(movie)
             case .failure(let error):
-                print("\(error.localizedDescription)")
+                self?.presenter?.present(error)
             case .empty:
-                print("no results")
+                self?.presenter?.present(nil)
             }
         }
     }

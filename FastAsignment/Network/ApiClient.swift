@@ -25,11 +25,11 @@ class ApiClient {
             defer {
                 self?.dataTask = nil
             }
-            if let error = error {
-                completionHandler(APIResult.failure(error))
-            }
-            else {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = error {
+                    completionHandler(APIResult.failure(error))
+                }
+                else {
                     if let data = data,
                        let response = response as? HTTPURLResponse {
                         do {
