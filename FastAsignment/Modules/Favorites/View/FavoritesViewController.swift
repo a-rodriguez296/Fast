@@ -29,11 +29,11 @@ class FavoritesViewController: UIViewController {
     }
 
     func configureTable() {
-        tableView.register(MovieViewCell.self)
+        tableView.register(FavoriteMovieViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 139.0
+        tableView.estimatedRowHeight = 91.0
     }
 
     func configureViews() {
@@ -58,9 +58,9 @@ extension FavoritesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MovieViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        let cell: FavoriteMovieViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         let movie = favoriteMovies[indexPath.row]
-        cell.configureCell(with: movie) { _ in}
+        cell.configureCell(with: movie)
         return cell
     }
 }

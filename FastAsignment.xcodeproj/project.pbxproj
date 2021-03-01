@@ -32,6 +32,8 @@
 		5F9277DB25EC7A3A00CE1F02 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277DA25EC7A3A00CE1F02 /* FavoritesPresenter.swift */; };
 		5F9277E025EC7A6200CE1F02 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */; };
 		5F9277E525EC7B6B00CE1F02 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */; };
+		5F9277EB25EC82E100CE1F02 /* FavoriteMovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9277E925EC82E000CE1F02 /* FavoriteMovieViewCell.swift */; };
+		5F9277EC25EC82E100CE1F02 /* FavoriteMovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9277EA25EC82E000CE1F02 /* FavoriteMovieViewCell.xib */; };
 		5F9C3EFD25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */; };
 		5F9C3F0025EB469700E2063F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C3EFF25EB469700E2063F /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		5F9277DA25EC7A3A00CE1F02 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
+		5F9277E925EC82E000CE1F02 /* FavoriteMovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewCell.swift; sourceTree = "<group>"; };
+		5F9277EA25EC82E000CE1F02 /* FavoriteMovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMovieViewCell.xib; sourceTree = "<group>"; };
 		5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesPlaylistInfo.swift; sourceTree = "<group>"; };
 		5F9C3EFF25EB469700E2063F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				5F9277DF25EC7A6200CE1F02 /* FavoritesViewController.swift */,
+				5F9277EE25EC869900CE1F02 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +301,15 @@
 				5F9277E425EC7B6B00CE1F02 /* FavoritesRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5F9277EE25EC869900CE1F02 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5F9277E925EC82E000CE1F02 /* FavoriteMovieViewCell.swift */,
+				5F9277EA25EC82E000CE1F02 /* FavoriteMovieViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5ECB6425E9A79F00E0918D /* LaunchScreen.storyboard in Resources */,
+				5F9277EC25EC82E100CE1F02 /* FavoriteMovieViewCell.xib in Resources */,
 				5F685C5F25EAC94C005BF21B /* MovieViewCell.xib in Resources */,
 				5F5ECB6125E9A79F00E0918D /* Assets.xcassets in Resources */,
 				5F5ECB5F25E9A79E00E0918D /* Main.storyboard in Resources */,
@@ -370,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5ECB5C25E9A79E00E0918D /* ViewController.swift in Sources */,
+				5F9277EB25EC82E100CE1F02 /* FavoriteMovieViewCell.swift in Sources */,
 				5F9277CF25EC790E00CE1F02 /* FavoritesContract.swift in Sources */,
 				5F3BEE5C25EAB7CE001385E3 /* ResultsInteractor.swift in Sources */,
 				5F685C6525EACD13005BF21B /* UIView+Extension.swift in Sources */,
