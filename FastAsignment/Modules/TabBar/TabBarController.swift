@@ -20,7 +20,8 @@ class TabBarController: UITabBarController {
 
     func setupVCs() {
             viewControllers = [
-                createNavController(for: ResultsRouter.assembleModule(), title: NSLocalizedString("Search", comment: ""), image: UIImage(systemName: "magnifyingglass")!)
+                createNavController(for: ResultsRouter.assembleModule(), title: NSLocalizedString("Search", comment: ""), image: UIImage(systemName: "magnifyingglass")!),
+                createNavController(for: FavoritesRouter.assembleModule(), title: NSLocalizedString("Favorites", comment: ""), image: UIImage(systemName: "star")!),
             ]
         }
 
