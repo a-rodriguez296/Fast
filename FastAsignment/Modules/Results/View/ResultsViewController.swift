@@ -73,6 +73,9 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
         let movie = movies[indexPath.row]
         cell.configureCell(with: movie) {[weak self] flag in
             self?.interactor?.toggleMovieFavoriteStatus(with: movie.imdbID, flag: flag)
+            if flag {
+                self?.showToast(message: NSLocalizedString("My favorite color is", comment: ""))
+            }
         }
         return cell
     }
