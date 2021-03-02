@@ -172,6 +172,14 @@
 			path = "Table Background View";
 			sourceTree = "<group>";
 		};
+		5F40305B25EDBDF30041FD5B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		5F5ECB4B25E9A79E00E0918D = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +207,7 @@
 				5F5ECB6525E9A79F00E0918D /* Info.plist */,
 				5F5ECB6F25E9A93300E0918D /* Other Resources */,
 				5F5ECB7425E9AA3800E0918D /* Network */,
-				5F9C3EFC25EB395D00E2063F /* FavoriteMoviesPlaylistInfo.swift */,
+				5F40305B25EDBDF30041FD5B /* Repository */,
 			);
 			path = FastAsignment;
 			sourceTree = "<group>";

@@ -34,6 +34,7 @@ class FavoritesViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 91.0
+        tableView.tableFooterView = UIView(frame: .zero)
     }
 
     func configureViews() {

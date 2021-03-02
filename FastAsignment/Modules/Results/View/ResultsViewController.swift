@@ -21,8 +21,6 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         configureViews()
         configureTable()
-
-        // Do any additional setup after loading the view.
     }
 
     func configureTable() {
@@ -75,7 +73,7 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configureCell(with: movie) {[weak self] flag in
             self?.interactor?.toggleMovieFavoriteStatus(with: movie.imdbID, flag: flag)
             if flag {
-                self?.showToast(message: NSLocalizedString("My favorite color is", comment: ""))
+                self?.showToast(message: NSLocalizedString("My favorite color is blue", comment: ""))
             }
         }
         return cell

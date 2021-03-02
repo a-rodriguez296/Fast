@@ -9,7 +9,6 @@ import Foundation
 
 struct MovieViewModel {
     var title: String
-    var year: String
     var genre: String
     var actors: String
     var plot: String
@@ -19,7 +18,6 @@ struct MovieViewModel {
 
     init(with movie: Movie) {
         title = movie.title
-        year = movie.year
         genre = movie.genre
         actors = movie.actors
         plot = movie.plot

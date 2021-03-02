@@ -60,6 +60,7 @@ class MovieViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         ApiClient.shared.cancelCurrentTask()
+        imageView?.image = nil
     }
 
     @IBAction func didPressFavoriteButton(_ sender: Any) {
